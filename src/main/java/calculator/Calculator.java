@@ -6,43 +6,6 @@ package calculator;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-abstract class CalculatorOptr{
-    int value1;
-
-    abstract void addition(int value);
-    abstract void subtraction(int value);
-    abstract void multiplication(int value);
-    abstract void division(int value);
-    public int getValue(){
-        return value1;
-
-    }
-   public void setValue(int val){
-        value1=val;
-    }
-}
-
-class SimpleCalculator extends CalculatorOptr{
-    private static final Logger log = Logger.getLogger("InfoLogging");
-    void addition(int val){
-        setValue(getValue()+val);
-    }    
-    void subtraction(int val){
-        setValue(getValue()-val);
-    }
-    void multiplication(int val){
-        setValue(getValue()*val);
-    }
-    void division(int val){
-        setValue(getValue()/val);
-    }
-    void result(){
-        String result = ""+getValue()+"\n";
-        log.info(result);
-    }
-}
-
-
 class Calculator{
     private static final Logger log = Logger.getLogger("InfoLogging");
     public static void main(String[] args) {
